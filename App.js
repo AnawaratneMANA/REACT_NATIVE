@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet,  TouchableNativeFeedback, Text, View, SafeAreaView, Image } from 'react-native';
+import { Button, StyleSheet,  TouchableNativeFeedback, Text, View, SafeAreaView, Image } from 'react-native';
 
 export default function App() {
   let x = 1;
@@ -11,17 +11,7 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <TouchableNativeFeedback onPress={() => console.log("Image Tapped")}>
-              <View
-                  style={{width: 200, height: 70, backgroundColor:  "dodgerblue" }}
-              >
-              </View>
-
-      </TouchableNativeFeedback>
-      <Text numberOfLines={1} onPress = {handlePressed}>Open up App.js to
-        start working on
-        our app! This is a very long text, Want to see what happen</Text>
-
+      <Button title="Click Me" onPress={() => console.log("Button Tap")}></Button>
     </SafeAreaView>
   );
 }
