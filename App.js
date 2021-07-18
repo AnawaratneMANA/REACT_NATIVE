@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet,  TouchableHighlight, Text, View, SafeAreaView, Image } from 'react-native';
+import { StyleSheet,  TouchableNativeFeedback, Text, View, SafeAreaView, Image } from 'react-native';
 
 export default function App() {
   let x = 1;
@@ -11,16 +11,13 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <TouchableHighlight onPress={() => console.log("Image Tapped")}>
-        <Image
-            blurRadius={10}
-            fadeDuration={1000}
-            source={{
-              width: 200,
-              height: 300,
-              uri: "https://picsum.photos/200/300"}}/>
+      <TouchableNativeFeedback onPress={() => console.log("Image Tapped")}>
+              <View
+                  style={{width: 200, height: 70, backgroundColor:  "dodgerblue" }}
+              >
+              </View>
 
-      </TouchableHighlight>
+      </TouchableNativeFeedback>
       <Text numberOfLines={1} onPress = {handlePressed}>Open up App.js to
         start working on
         our app! This is a very long text, Want to see what happen</Text>
