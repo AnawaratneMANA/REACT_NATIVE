@@ -11,7 +11,7 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Button title="Click Me" onPress={() => console.log("Button Tap")}></Button>
+      <Button title="Click Me" onPress={() => console.log("But")}></Button>
     </SafeAreaView>
   );
 }
