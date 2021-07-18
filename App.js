@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, Image } from 'react-native';
 
 export default function App() {
   let x = 1;
@@ -14,6 +14,7 @@ export default function App() {
       <Text numberOfLines={1} onPress = {handlePressed}>Open up App.js to
         start working on
         our app! This is a very long text, Want to see what happen</Text>
+      <Image source={require("./assets/favicon.png")}/>
     </SafeAreaView>
   );
 }
@@ -21,6 +22,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'dodgerblue',
+    backgroundColor: '#fff',
+    justifyContent: "center",
+    alignItems : "center"
   },
 });
