@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, TouchableWithoutFeedback, Text, View, SafeAreaView, Image } from 'react-native';
+import { StyleSheet,  TouchableOpacity, Text, View, SafeAreaView, Image } from 'react-native';
 
 export default function App() {
   let x = 1;
@@ -11,7 +11,7 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <TouchableWithoutFeedback onPress={() => console.log("Image Tapped")}>
+      <TouchableOpacity onPress={() => console.log("Image Tapped")}>
         <Image
             blurRadius={10}
             fadeDuration={1000}
@@ -20,7 +20,7 @@ export default function App() {
               height: 300,
               uri: "https://picsum.photos/200/300"}}/>
 
-      </TouchableWithoutFeedback>
+      </TouchableOpacity>
       <Text numberOfLines={1} onPress = {handlePressed}>Open up App.js to
         start working on
         our app! This is a very long text, Want to see what happen</Text>
