@@ -14,8 +14,10 @@ export default function App() {
       <Text numberOfLines={1} onPress = {handlePressed}>Open up App.js to
         start working on
         our app! This is a very long text, Want to see what happen</Text>
-      <Image source={{
-
+      <Image
+          blurRadius={10}
+          fadeDuration={1000}
+          source={{
         width: 200,
         height: 300,
         uri: "https://picsum.photos/200/300"}}/>
